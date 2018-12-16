@@ -31,6 +31,5 @@ $sql ="UPDATE `contact` SET `approval`= '$napproval' WHERE id = '$eid' ";
 	}
 
 
-
 }
 ?>
