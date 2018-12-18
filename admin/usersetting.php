@@ -175,4 +175,48 @@ ob_start();
                             
                         </div>
                     </div>
-                    
+                     <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											
+                                           <input type="submit" name="in" value="Add" class="btn btn-primary">
+										  </form>
+										   
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<?php
+						if(isset($_POST['in']))
+						{
+							$newus = $_POST['newus'];
+							$newps = $_POST['newps'];
+							
+							$newsql ="Insert into login (usname,pass) values ('$newus','$newps')";
+							if(mysqli_query($con,$newsql))
+							{
+							echo' <script language="javascript" type="text/javascript"> alert("User name and password Added") </script>';
+							
+						
+							}
+						header("Location: usersetting.php");
+						}
+						?>
+						
+					<div class="panel-body">
+                            
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">Change the User name and Password</h4>
+                                        </div>
+										<form method="post">
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                            <label>Change User name</label>
+                                            <input name="usname" value="<?php echo $us; ?>" class="form-control" placeholder="Enter User name">
+											</div>
+										</div>
+										<div class="modal-body">
