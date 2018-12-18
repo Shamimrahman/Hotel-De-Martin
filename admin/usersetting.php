@@ -153,6 +153,25 @@ ob_start();
                                     </tbody>
                                 </table>
                             </div>
+				<div class="panel-body">
+                            <button class="btn btn-primary btn" data-toggle="modal" data-target="#myModal1">
+															Add New Admin
+													</button>
+                            <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">Add the User name and Password</h4>
+                                        </div>
+										<form method="post">
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                            <label>Add new User name</label>
+                                            <input name="newus"  class="form-control" placeholder="Enter User name">
+											</div>
+										</div>
+										<div class="modal-body">
                             
                         </div>
                     </div>
