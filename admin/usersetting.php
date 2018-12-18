@@ -220,3 +220,54 @@ ob_start();
 											</div>
 										</div>
 										<div class="modal-body">
+											  <div class="form-group">
+                                            <label>Change Password</label>
+                                            <input name="pasd" value="<?php echo $ps; ?>" class="form-control" placeholder="Enter Password">
+											</div>
+                                        </div>
+										
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											
+                                           <input type="submit" name="up" value="Update" class="btn btn-primary">
+										  </form>
+										   
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+               
+                <!-- /. ROW  -->
+                <?php 
+				if(isset($_POST['up']))
+				{
+					$usname = $_POST['usname'];
+					$passwr = $_POST['pasd'];
+					
+					$upsql = "UPDATE `login` SET `usname`='$usname',`pass`='$passwr' WHERE id = '$id'";
+					if(mysqli_query($con,$upsql))
+					{
+					echo' <script language="javascript" type="text/javascript"> alert("User name and password update") </script>';
+					
+				
+					}
+				
+				header("Location: usersetting.php");
+				
+				}
+				ob_end_flush();
+				
+				
+				
+				
+				?>
+                                
+                  
+            
+			 <!-- /. PAGE INNER  -->
+            </div>
+         <!-- /. PAGE WRAPPER  -->
+        </div>
